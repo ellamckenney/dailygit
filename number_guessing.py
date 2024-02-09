@@ -8,7 +8,7 @@ won = False
 
 while guesses < guess_limit and not won:
   try:
-    guess = int(input("Guess a number between 1 and 500 ({guess_limit} guesses left): "))
+    guess = int(input("Guess a number between 1 and 500: "))
   except ValueError:
     print("Input is invalid. Please enter a number.")
     continue
@@ -24,6 +24,6 @@ while guesses < guess_limit and not won:
     
   remaining_guesses = guess_limit - guesses
   print(f"You have {remaining_guesses} guesses left.")
-
-if not won:
-  print(f"You ran out of guesses! The number was {random_number}.")
+  
+  if not won:
+    print(f"You ran out of guesses! The number was {random_number}.")
